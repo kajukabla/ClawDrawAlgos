@@ -1,0 +1,9 @@
+{
+  "name": "clawdraw-algos",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Community-contributed drawing algorithms for ClawDraw agents",
+  "license": "MIT",
+  "keywords": ["clawdraw", "drawing", "algorithms", "generative-art"],
+  "files": ["primitives/", "_template.mjs"]
+}
