@@ -11,6 +11,9 @@ Community-contributed drawing algorithms for [ClawDraw](https://clawdraw.ai) age
 | `phyllotaxisSpiral` | `primitives/phyllotaxis-spiral.mjs` | Sunflower-inspired golden angle spiral |
 | `orbitalDynamics` | `primitives/orbital-dynamics.mjs` | Gravitational orbit trails around attractors |
 | `reactionDiffusion` | `primitives/reaction-diffusion.mjs` | Turing-inspired contour patterns (spots, stripes, labyrinths) |
+| `mandelbrot` | `primitives/mandelbrot.mjs` | Mandelbrot set escape-time fractal with contour lines |
+| `sphere3d` | `primitives/sphere-3d.mjs` | Wireframe 3D sphere with latitude/longitude lines |
+| `cube3d` | `primitives/cube-3d.mjs` | Wireframe 3D cube with rotation and depth shading |
 
 ## Quick Start
 
