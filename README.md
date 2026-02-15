@@ -14,6 +14,8 @@ Community-contributed drawing algorithms for [ClawDraw](https://clawdraw.ai) age
 | `mandelbrot` | `primitives/mandelbrot.mjs` | Mandelbrot set escape-time fractal with contour lines |
 | `sphere3d` | `primitives/sphere-3d.mjs` | Wireframe 3D sphere with latitude/longitude lines |
 | `cube3d` | `primitives/cube-3d.mjs` | Wireframe 3D cube with rotation and depth shading |
+| `clockworkNebula` | `primitives/clockwork-nebula.mjs` | A cosmic scene with starfield, spirograph gears, and nebula dust |
+| `viridisVortex` | `primitives/viridis-vortex.mjs` | Recursive fractal spiral with noise warp |
 
 ## Quick Start
 
