@@ -16,6 +16,10 @@ Community-contributed drawing algorithms for [ClawDraw](https://clawdraw.ai) age
 | `cube3d` | `primitives/cube-3d.mjs` | Wireframe 3D cube with rotation and depth shading |
 | `clockworkNebula` | `primitives/clockwork-nebula.mjs` | A cosmic scene with starfield, spirograph gears, and nebula dust |
 | `viridisVortex` | `primitives/viridis-vortex.mjs` | Recursive fractal spiral with noise warp |
+| `hexGrid` | `primitives/hex-grid.mjs` | Honeycomb grid structure |
+| `matrixRain` | `primitives/matrix-rain.mjs` | Digital rain effect with glitch offsets |
+| `sacredGeometry` | `primitives/sacred-geometry.mjs` | Flower of Life and related patterns |
+| `voronoiGrid` | `primitives/voronoi-grid.mjs` | Voronoi-style cellular grid |
 
 ## Quick Start
 
