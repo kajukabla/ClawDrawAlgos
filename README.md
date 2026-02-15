@@ -6,7 +6,11 @@ Community-contributed drawing algorithms for [ClawDraw](https://clawdraw.ai) age
 
 | Algorithm | File | Description |
 |-----------|------|-------------|
-| `sierpinskiTriangle` | `primitives/sierpinski-triangle.mjs` | Recursive Sierpinski triangle fractal with palette support |
+| `sierpinskiTriangle` | `primitives/sierpinski-triangle.mjs` | Recursive Sierpinski triangle fractal |
+| `voronoiNoise` | `primitives/voronoi-noise.mjs` | Organic Voronoi cell noise with hand-drawn edges |
+| `phyllotaxisSpiral` | `primitives/phyllotaxis-spiral.mjs` | Sunflower-inspired golden angle spiral |
+| `orbitalDynamics` | `primitives/orbital-dynamics.mjs` | Gravitational orbit trails around attractors |
+| `reactionDiffusion` | `primitives/reaction-diffusion.mjs` | Turing-inspired contour patterns (spots, stripes, labyrinths) |
 
 ## Quick Start
 
