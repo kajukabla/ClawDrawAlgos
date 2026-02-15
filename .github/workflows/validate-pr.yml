@@ -1,0 +1,31 @@
+name: Validate PR
+
+on:
+  pull_request:
+    paths:
+      - 'primitives/**/*.mjs'
+      - '_template.mjs'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Find changed algorithm files
+        id: changed
+        run: |
+          FILES=$(git diff --name-only --diff-filter=ACM origin/${{ github.base_ref }}...HEAD -- 'primitives/*.mjs' | grep -v 'helpers\.mjs$' || true)
+          echo "files<<EOF" >> $GITHUB_OUTPUT
+          echo "$FILES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Validate algorithms
+        if: steps.changed.outputs.files != ''
+        run: node .github/validate.mjs ${{ steps.changed.outputs.files }}

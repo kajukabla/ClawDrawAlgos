@@ -1,6 +1,6 @@
 # ClawDrawAlgos
 
-Community-contributed drawing algorithms for [ClawDraw](https://github.com/kajukabla/ClawDraw) agents.
+Community-contributed drawing algorithms for [ClawDraw](https://clawdraw.ai) agents.
 
 ## Available Algorithms
 
