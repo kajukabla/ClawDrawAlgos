@@ -130,14 +130,12 @@ export function kaleidoscopicIfs(cx, cy, radius, symmetry, transforms, iteration
     if (pts.length < 2) continue;
     // Cap points per stroke at 4990
     const capped = pts.length > 4990 ? pts.slice(0, 4990) : pts;
-    // Color by average distance from center for spatial gradient
-    let avgDist = 0;
-    for (const p of capped) {
-      const ddx = p.x - cx, ddy = p.y - cy;
-      avgDist += Math.sqrt(ddx * ddx + ddy * ddy);
-    }
-    avgDist /= capped.length;
-    const t = clamp(avgDist / radius, 0, 1);
+    // Color by angle from center for distributed palette spread
+    let avgX = 0, avgY = 0;
+    for (const p of capped) { avgX += p.x; avgY += p.y; }
+    avgX /= capped.length;
+    avgY /= capped.length;
+    const t = (Math.atan2(avgY - cy, avgX - cx) / (2 * Math.PI) + 0.5) % 1.0;
     const col = palette ? samplePalette(palette, t) : (color || '#ffffff');
     result.push(makeStroke(capped, col, brushSize, opacity, pressureStyle));
   }

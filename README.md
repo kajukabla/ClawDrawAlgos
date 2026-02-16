@@ -5,46 +5,58 @@ Community-contributed drawing algorithms for [ClawDraw](https://clawdraw.ai) age
 <div align="center">
 <table>
   <tr>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/sierpinski-triangle.png" width="180"><br><sub>Sierpinski Triangle</sub></td>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/voronoi-noise.png" width="180"><br><sub>Voronoi Noise</sub></td>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/phyllotaxis-spiral.png" width="180"><br><sub>Phyllotaxis Spiral</sub></td>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/gravity-swirl.png" width="180"><br><sub>Gravity Swirl</sub></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#sierpinski-triangle"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/sierpinski-triangle.png" width="180"><br><sub>Sierpinski Triangle</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#voronoi-noise"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/voronoi-noise.png" width="180"><br><sub>Voronoi Noise</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#phyllotaxis-spiral"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/phyllotaxis-spiral.png" width="180"><br><sub>Phyllotaxis Spiral</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#gravity-swirl"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/gravity-swirl.png" width="180"><br><sub>Gravity Swirl</sub></a></td>
   </tr>
   <tr>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/reaction-diffusion.png" width="180"><br><sub>Reaction Diffusion</sub></td>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/mandelbrot.png" width="180"><br><sub>Mandelbrot</sub></td>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/sphere-3d.png" width="180"><br><sub>3D Sphere</sub></td>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/cube-3d.png" width="180"><br><sub>3D Cube</sub></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#reaction-diffusion"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/reaction-diffusion.png" width="180"><br><sub>Reaction Diffusion</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#mandelbrot"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/mandelbrot.png" width="180"><br><sub>Mandelbrot</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#sphere-3d"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/sphere-3d.png" width="180"><br><sub>3D Sphere</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#cube-3d"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/cube-3d.png" width="180"><br><sub>3D Cube</sub></a></td>
   </tr>
   <tr>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/turing-patterns.png" width="180"><br><sub>Turing Patterns</sub></td>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/gray-scott.png" width="180"><br><sub>Gray-Scott</sub></td>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/metaballs.png" width="180"><br><sub>Metaballs</sub></td>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/domain-warping.png" width="180"><br><sub>Domain Warping</sub></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#turing-patterns"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/turing-patterns.png" width="180"><br><sub>Turing Patterns</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#gray-scott"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/gray-scott.png" width="180"><br><sub>Gray-Scott</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#metaballs"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/metaballs.png" width="180"><br><sub>Metaballs</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#domain-warping"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/domain-warping.png" width="180"><br><sub>Domain Warping</sub></a></td>
   </tr>
   <tr>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/worley-noise.png" width="180"><br><sub>Worley Noise</sub></td>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/slime-mold.png" width="180"><br><sub>Slime Mold</sub></td>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/hopalong-attractor.png" width="180"><br><sub>Hopalong Attractor</sub></td>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/clifford-attractor.png" width="180"><br><sub>Clifford Attractor</sub></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#worley-noise"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/worley-noise.png" width="180"><br><sub>Worley Noise</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#slime-mold"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/slime-mold.png" width="180"><br><sub>Slime Mold</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#hopalong-attractor"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/hopalong-attractor.png" width="180"><br><sub>Hopalong Attractor</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#clifford-attractor"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/clifford-attractor.png" width="180"><br><sub>Clifford Attractor</sub></a></td>
   </tr>
   <tr>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/double-pendulum.png" width="180"><br><sub>Double Pendulum</sub></td>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/kaleidoscopic-ifs.png" width="180"><br><sub>Kaleidoscopic IFS</sub></td>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/apollonian-gasket.png" width="180"><br><sub>Apollonian Gasket</sub></td>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/voronoi-crackle.png" width="180"><br><sub>Voronoi Crackle</sub></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#double-pendulum"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/double-pendulum.png" width="180"><br><sub>Double Pendulum</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#kaleidoscopic-ifs"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/kaleidoscopic-ifs.png" width="180"><br><sub>Kaleidoscopic IFS</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#apollonian-gasket"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/apollonian-gasket.png" width="180"><br><sub>Apollonian Gasket</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#voronoi-crackle"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/voronoi-crackle.png" width="180"><br><sub>Voronoi Crackle</sub></a></td>
   </tr>
   <tr>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/penrose-tiling.png" width="180"><br><sub>Penrose Tiling</sub></td>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/hyperbolic-tiling.png" width="180"><br><sub>Hyperbolic Tiling</sub></td>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/gielis-superformula.png" width="180"><br><sub>Gielis Superformula</sub></td>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/lichen-growth.png" width="180"><br><sub>Lichen Growth</sub></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#penrose-tiling"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/penrose-tiling.png" width="180"><br><sub>Penrose Tiling</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#hyperbolic-tiling"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/hyperbolic-tiling.png" width="180"><br><sub>Hyperbolic Tiling</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#gielis-superformula"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/gielis-superformula.png" width="180"><br><sub>Gielis Superformula</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#lichen-growth"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/lichen-growth.png" width="180"><br><sub>Lichen Growth</sub></a></td>
   </tr>
   <tr>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/dla.png" width="180"><br><sub>DLA</sub></td>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/schotter.png" width="180"><br><sub>Schotter</sub></td>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/langtons-ant.png" width="180"><br><sub>Langton's Ant</sub></td>
-    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/wave-function-collapse.png" width="180"><br><sub>Wave Function Collapse</sub></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#dla"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/dla.png" width="180"><br><sub>DLA</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#schotter"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/schotter.png" width="180"><br><sub>Schotter</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#langtons-ant"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/langtons-ant.png" width="180"><br><sub>Langton's Ant</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#wave-function-collapse"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/wave-function-collapse.png" width="180"><br><sub>Wave Function Collapse</sub></a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#vine-growth"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/vine-growth.png" width="180"><br><sub>Vine Growth</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#dragon-curve"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/dragon-curve.png" width="180"><br><sub>Dragon Curve</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#game-of-life"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/game-of-life.png" width="180"><br><sub>Game of Life</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#julia-set"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/julia-set.png" width="180"><br><sub>Julia Set</sub></a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#koch-snowflake"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/koch-snowflake.png" width="180"><br><sub>Koch Snowflake</sub></a></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
 </table>
 </div>
@@ -87,6 +99,11 @@ Community-contributed drawing algorithms for [ClawDraw](https://clawdraw.ai) age
 | `matrixRain` | `primitives/matrix-rain.mjs` | Digital rain effect with glitch offsets |
 | `sacredGeometry` | `primitives/sacred-geometry.mjs` | Flower of Life and related patterns |
 | `voronoiGrid` | `primitives/voronoi-grid.mjs` | Voronoi-style cellular grid |
+| `vineGrowth` | `primitives/vine-growth.mjs` | Recursive branching vine tendrils with curl noise |
+| `dragonCurve` | `primitives/dragon-curve.mjs` | Heighway dragon fractal curve via L-system fold sequence |
+| `gameOfLife` | `primitives/game-of-life.mjs` | Conway's Game of Life cellular automaton |
+| `juliaSet` | `primitives/julia-set.mjs` | Julia set escape-time fractal with contour lines |
+| `kochSnowflake` | `primitives/koch-snowflake.mjs` | Koch snowflake fractal via recursive edge subdivision |
 
 ## Quick Start
 

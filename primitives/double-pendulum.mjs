@@ -114,7 +114,8 @@ export function doublePendulum(cx, cy, radius, angle1, angle2, steps, traces, co
       y: cy + (p.y - (minY + maxY) / 2) * scale,
     }));
 
-    const t = tr / Math.max(traces - 1, 1);
+    const rawT = tr / Math.max(traces - 1, 1);
+    const t = 0.15 + rawT * 0.55;
     const col = palette ? samplePalette(palette, t) : (color || '#ffffff');
     const strokes = splitIntoStrokes(mapped, col, brushSize, opacity, pressureStyle);
     for (const stroke of strokes) {

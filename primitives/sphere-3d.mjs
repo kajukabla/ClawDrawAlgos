@@ -108,7 +108,7 @@ export function sphere3d(cx, cy, radius, latLines, lonLines, rotateX, rotateY, c
   // Longitude lines
   for (let i = 0; i < lonLines && result.length < 200; i++) {
     const theta = (i / lonLines) * Math.PI * 2;
-    const t = theta / (Math.PI * 2);
+    const t = (1 - Math.cos(theta)) / 2;
     const c = palette ? samplePalette(palette, t) : (color || '#ffffff');
 
     const frontPts = [];

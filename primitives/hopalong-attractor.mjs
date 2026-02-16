@@ -66,7 +66,7 @@ export function hopalongAttractor(cx, cy, radius, a, b, c, numPoints, numStrokes
     y: cy + (p.y - (minY + maxY) / 2) * scale,
   }));
 
-  // Color by average distance from center for spatial gradient
+  // Color by angle from center for distributed palette spread
   const result = [];
   const chunkSize = Math.ceil(mapped.length / numStrokes);
   for (let i = 0; i < numStrokes && result.length < 200; i++) {
@@ -74,13 +74,11 @@ export function hopalongAttractor(cx, cy, radius, a, b, c, numPoints, numStrokes
     const end = Math.min(start + chunkSize + 1, mapped.length);
     const pts = mapped.slice(start, end);
     if (pts.length < 2) continue;
-    let avgDist = 0;
-    for (const p of pts) {
-      const dx = p.x - cx, dy = p.y - cy;
-      avgDist += Math.sqrt(dx * dx + dy * dy);
-    }
-    avgDist /= pts.length;
-    const t = palette ? clamp(avgDist / radius, 0, 1) : 0;
+    let avgX = 0, avgY = 0;
+    for (const p of pts) { avgX += p.x; avgY += p.y; }
+    avgX /= pts.length;
+    avgY /= pts.length;
+    const t = palette ? (Math.atan2(avgY - cy, avgX - cx) / (2 * Math.PI) + 0.5) % 1.0 : 0;
     const col = palette ? samplePalette(palette, t) : (color || '#ffffff');
     result.push(makeStroke(pts, col, brushSize, opacity, pressureStyle));
   }

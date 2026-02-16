@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClawDrawAlgos Gallery</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0a0a0a; color: #ccc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+  h1 { text-align: center; padding: 24px 0 8px; font-size: 1.6rem; color: #eee; }
+  .subtitle { text-align: center; color: #888; font-size: 0.9rem; margin-bottom: 20px; }
+  .subtitle a { color: #7b9; text-decoration: none; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; padding: 0 16px 40px; max-width: 1200px; margin: 0 auto; }
+  .card { cursor: pointer; border-radius: 8px; overflow: hidden; background: #141414; transition: transform 0.15s; }
+  .card:hover { transform: scale(1.03); }
+  .card img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
+  .card .label { padding: 6px 8px; font-size: 0.82rem; text-align: center; color: #aaa; }
+  /* Lightbox overlay */
+  .lightbox { display: none; position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.92); align-items: center; justify-content: center; flex-direction: column; }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 90vw; max-height: 80vh; border-radius: 6px; box-shadow: 0 4px 40px rgba(0,0,0,0.6); }
+  .lightbox .caption { color: #ccc; font-size: 1.1rem; margin-top: 12px; }
+  .lightbox .close { position: absolute; top: 16px; right: 24px; font-size: 2rem; color: #888; cursor: pointer; line-height: 1; }
+  .lightbox .close:hover { color: #fff; }
+  .lightbox .nav { position: absolute; top: 50%; font-size: 2.5rem; color: #666; cursor: pointer; user-select: none; padding: 12px; }
+  .lightbox .nav:hover { color: #fff; }
+  .lightbox .prev { left: 12px; transform: translateY(-50%); }
+  .lightbox .next { right: 12px; transform: translateY(-50%); }
+</style>
+</head>
+<body>
+<h1>ClawDrawAlgos Gallery</h1>
+<p class="subtitle">Community drawing algorithms for <a href="https://github.com/kajukabla/ClawDrawAlgos">ClawDraw</a>. Click any image to view fullscreen.</p>
+<div class="grid" id="grid"></div>
+<div class="lightbox" id="lightbox">
+  <span class="close" id="lb-close">&times;</span>
+  <span class="nav prev" id="lb-prev">&#8249;</span>
+  <span class="nav next" id="lb-next">&#8250;</span>
+  <img id="lb-img" src="" alt="">
+  <div class="caption" id="lb-caption"></div>
+</div>
+<script>
+const BASE = 'https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/';
+const algos = [
+  ['sierpinski-triangle', 'Sierpinski Triangle'],
+  ['voronoi-noise', 'Voronoi Noise'],
+  ['phyllotaxis-spiral', 'Phyllotaxis Spiral'],
+  ['gravity-swirl', 'Gravity Swirl'],
+  ['reaction-diffusion', 'Reaction Diffusion'],
+  ['mandelbrot', 'Mandelbrot'],
+  ['sphere-3d', '3D Sphere'],
+  ['cube-3d', '3D Cube'],
+  ['turing-patterns', 'Turing Patterns'],
+  ['gray-scott', 'Gray-Scott'],
+  ['metaballs', 'Metaballs'],
+  ['domain-warping', 'Domain Warping'],
+  ['worley-noise', 'Worley Noise'],
+  ['slime-mold', 'Slime Mold'],
+  ['hopalong-attractor', 'Hopalong Attractor'],
+  ['clifford-attractor', 'Clifford Attractor'],
+  ['double-pendulum', 'Double Pendulum'],
+  ['kaleidoscopic-ifs', 'Kaleidoscopic IFS'],
+  ['apollonian-gasket', 'Apollonian Gasket'],
+  ['voronoi-crackle', 'Voronoi Crackle'],
+  ['penrose-tiling', 'Penrose Tiling'],
+  ['hyperbolic-tiling', 'Hyperbolic Tiling'],
+  ['gielis-superformula', 'Gielis Superformula'],
+  ['lichen-growth', 'Lichen Growth'],
+  ['dla', 'DLA'],
+  ['schotter', 'Schotter'],
+  ['langtons-ant', "Langton's Ant"],
+  ['wave-function-collapse', 'Wave Function Collapse'],
+  ['vine-growth', 'Vine Growth'],
+  ['dragon-curve', 'Dragon Curve'],
+  ['game-of-life', 'Game of Life'],
+  ['julia-set', 'Julia Set'],
+  ['koch-snowflake', 'Koch Snowflake'],
+];
+
+const grid = document.getElementById('grid');
+algos.forEach(([id, label], i) => {
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.id = id;
+  card.innerHTML = `<img src="${BASE}${id}.png" alt="${label}" loading="lazy"><div class="label">${label}</div>`;
+  card.onclick = () => openLightbox(i);
+  grid.appendChild(card);
+});
+
+let currentIdx = 0;
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lb-img');
+const lbCap = document.getElementById('lb-caption');
+
+function openLightbox(i) {
+  currentIdx = i;
+  lbImg.src = BASE + algos[i][0] + '.png';
+  lbCap.textContent = algos[i][1];
+  lb.classList.add('open');
+}
+function closeLightbox() { lb.classList.remove('open'); }
+function navLightbox(dir) {
+  currentIdx = (currentIdx + dir + algos.length) % algos.length;
+  lbImg.src = BASE + algos[currentIdx][0] + '.png';
+  lbCap.textContent = algos[currentIdx][1];
+}
+
+document.getElementById('lb-close').onclick = closeLightbox;
+document.getElementById('lb-prev').onclick = () => navLightbox(-1);
+document.getElementById('lb-next').onclick = () => navLightbox(1);
+lb.onclick = (e) => { if (e.target === lb) closeLightbox(); };
+document.addEventListener('keydown', (e) => {
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') navLightbox(-1);
+  if (e.key === 'ArrowRight') navLightbox(1);
+});
+
+// Open from hash anchor
+if (location.hash) {
+  const target = location.hash.slice(1);
+  const idx = algos.findIndex(([id]) => id === target);
+  if (idx >= 0) setTimeout(() => openLightbox(idx), 300);
+}
+</script>
+</body>
+</html>
