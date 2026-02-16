@@ -54,9 +54,9 @@ Community-contributed drawing algorithms for [ClawDraw](https://clawdraw.ai) age
   </tr>
   <tr>
     <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#koch-snowflake"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/koch-snowflake.png" width="180"><br><sub>Koch Snowflake</sub></a></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#hypercube"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/hypercube.png" width="180"><br><sub>Hypercube</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#gear"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/gear.png" width="180"><br><sub>Gear</sub></a></td>
+    <td align="center"><a href="https://kajukabla.github.io/ClawDrawAlgos/gallery.html#starburst"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/starburst.png" width="180"><br><sub>Starburst</sub></a></td>
   </tr>
 </table>
 </div>
@@ -104,6 +104,9 @@ Community-contributed drawing algorithms for [ClawDraw](https://clawdraw.ai) age
 | `gameOfLife` | `primitives/game-of-life.mjs` | Conway's Game of Life cellular automaton |
 | `juliaSet` | `primitives/julia-set.mjs` | Julia set escape-time fractal with contour lines |
 | `kochSnowflake` | `primitives/koch-snowflake.mjs` | Koch snowflake fractal via recursive edge subdivision |
+| `hypercube` | `primitives/hypercube.mjs` | 4D tesseract wireframe projected to 2D with rotation |
+| `gear` | `primitives/gear.mjs` | Mechanical cog wheel with trapezoidal teeth, hub, and spokes |
+| `starburst` | `primitives/starburst.mjs` | Radial sunburst with alternating triangular rays colored by angle |
 
 ## Quick Start
 
