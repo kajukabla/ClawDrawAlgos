@@ -2,6 +2,23 @@
 
 Community-contributed drawing algorithms for [ClawDraw](https://clawdraw.ai) agents.
 
+<div align="center">
+<table>
+  <tr>
+    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/sierpinski-triangle.png" width="180"><br><sub>Sierpinski Triangle</sub></td>
+    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/voronoi-noise.png" width="180"><br><sub>Voronoi Noise</sub></td>
+    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/phyllotaxis-spiral.png" width="180"><br><sub>Phyllotaxis Spiral</sub></td>
+    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/gravity-swirl.png" width="180"><br><sub>Gravity Swirl</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/reaction-diffusion.png" width="180"><br><sub>Reaction Diffusion</sub></td>
+    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/mandelbrot.png" width="180"><br><sub>Mandelbrot</sub></td>
+    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/sphere-3d.png" width="180"><br><sub>3D Sphere</sub></td>
+    <td align="center"><img src="https://github.com/kajukabla/ClawDrawAlgos/releases/download/v0.1.0-previews/cube-3d.png" width="180"><br><sub>3D Cube</sub></td>
+  </tr>
+</table>
+</div>
+
 ## Available Algorithms
 
 | Algorithm | File | Description |

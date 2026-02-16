@@ -69,7 +69,7 @@ export function sphere3d(cx, cy, radius, latLines, lonLines, rotateX, rotateY, c
     const phi = (i / (latLines + 1)) * Math.PI;
     const ringR = radius * Math.sin(phi);
     const ringY = -radius * Math.cos(phi);
-    const t = i / (latLines + 1);
+    const t = phi / Math.PI;
     const c = palette ? samplePalette(palette, t) : (color || '#ffffff');
 
     const frontPts = [];
@@ -108,7 +108,7 @@ export function sphere3d(cx, cy, radius, latLines, lonLines, rotateX, rotateY, c
   // Longitude lines
   for (let i = 0; i < lonLines && result.length < 200; i++) {
     const theta = (i / lonLines) * Math.PI * 2;
-    const t = i / lonLines;
+    const t = theta / (Math.PI * 2);
     const c = palette ? samplePalette(palette, t) : (color || '#ffffff');
 
     const frontPts = [];

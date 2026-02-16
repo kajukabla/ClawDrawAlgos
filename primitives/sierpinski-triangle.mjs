@@ -41,7 +41,7 @@ export function sierpinskiTriangle(cx, cy, radius, depth, color, brushSize, opac
   cx = Number(cx) || 0;
   cy = Number(cy) || 0;
   radius = clamp(Number(radius) || 120, 10, 500);
-  depth = clamp(Math.round(Number(depth) || 4), 1, 5);
+  depth = clamp(Math.round(Number(depth) || 4), 1, 6);
   brushSize = clamp(Number(brushSize) || 3, 3, 100);
   opacity = clamp(Number(opacity) || 0.9, 0.01, 1);
 
@@ -64,7 +64,7 @@ export function sierpinskiTriangle(cx, cy, radius, depth, color, brushSize, opac
   }
 
   function subdivide(v0, v1, v2, d) {
-    if (result.length >= 200) return;
+    if (result.length >= 250) return;
 
     if (d <= 0) {
       // Leaf: draw this triangle as a closed stroke
@@ -93,5 +93,5 @@ export function sierpinskiTriangle(cx, cy, radius, depth, color, brushSize, opac
 
   subdivide(outerVerts[0], outerVerts[1], outerVerts[2], depth);
 
-  return result.slice(0, 200);
+  return result.slice(0, 250);
 }

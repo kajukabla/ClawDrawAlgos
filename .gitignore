@@ -8,3 +8,5 @@ coverage/
 .vscode/
 *.swp
 *.swo
+scripts/
+assets/previews/
