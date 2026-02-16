@@ -2,12 +2,29 @@ name: Validate PR
 
 on:
   pull_request:
-    paths:
-      - 'primitives/**/*.mjs'
-      - '_template.mjs'
+    types: [opened, reopened, closed]
 
 jobs:
+  notify-opened:
+    if: github.event.action == 'opened' || github.event.action == 'reopened'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Discord - PR Opened
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_ALGOS_WEBHOOK_URL }}
+        run: |
+          curl -s -H "Content-Type: application/json" -X POST "$DISCORD_WEBHOOK_URL" -d '{
+            "embeds": [{
+              "title": "New Algorithm PR: #${{ github.event.pull_request.number }}",
+              "description": "**Title:** ${{ github.event.pull_request.title }}\n**Author:** ${{ github.actor }}\n**Link:** ${{ github.event.pull_request.html_url }}",
+              "color": 3447003,
+              "footer": {"text": "ClawDraw Algos"},
+              "timestamp": "'"$(date -u +%Y-%m-%dT%H:%M:%SZ)"'"
+            }]
+          }'
+
   validate:
+    if: github.event.action != 'closed'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -29,3 +46,72 @@ jobs:
       - name: Validate algorithms
         if: steps.changed.outputs.files != ''
         run: node .github/validate.mjs ${{ steps.changed.outputs.files }}
+
+  notify-validation:
+    needs: validate
+    if: always() && github.event.action != 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Discord - Validation Passed
+        if: needs.validate.result == 'success'
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_ALGOS_WEBHOOK_URL }}
+        run: |
+          curl -s -H "Content-Type: application/json" -X POST "$DISCORD_WEBHOOK_URL" -d '{
+            "embeds": [{
+              "title": "Algorithm Validation Passed: #${{ github.event.pull_request.number }}",
+              "description": "**Author:** ${{ github.actor }}",
+              "color": 3066993,
+              "footer": {"text": "ClawDraw Algos"},
+              "timestamp": "'"$(date -u +%Y-%m-%dT%H:%M:%SZ)"'"
+            }]
+          }'
+
+      - name: Notify Discord - Validation Failed
+        if: needs.validate.result == 'failure'
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_ALGOS_WEBHOOK_URL }}
+        run: |
+          curl -s -H "Content-Type: application/json" -X POST "$DISCORD_WEBHOOK_URL" -d '{
+            "embeds": [{
+              "title": "Algorithm Validation Failed: #${{ github.event.pull_request.number }}",
+              "description": "**Author:** ${{ github.actor }}\n**Run:** [View logs](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})",
+              "color": 15158332,
+              "footer": {"text": "ClawDraw Algos"},
+              "timestamp": "'"$(date -u +%Y-%m-%dT%H:%M:%SZ)"'"
+            }]
+          }'
+
+  notify-closed:
+    if: github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Discord - PR Merged
+        if: github.event.pull_request.merged == true
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_ALGOS_WEBHOOK_URL }}
+        run: |
+          curl -s -H "Content-Type: application/json" -X POST "$DISCORD_WEBHOOK_URL" -d '{
+            "embeds": [{
+              "title": "Algorithm Merged: #${{ github.event.pull_request.number }}",
+              "description": "**Title:** ${{ github.event.pull_request.title }}\n**Author:** ${{ github.actor }}",
+              "color": 10181046,
+              "footer": {"text": "ClawDraw Algos"},
+              "timestamp": "'"$(date -u +%Y-%m-%dT%H:%M:%SZ)"'"
+            }]
+          }'
+
+      - name: Notify Discord - PR Closed
+        if: github.event.pull_request.merged == false
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_ALGOS_WEBHOOK_URL }}
+        run: |
+          curl -s -H "Content-Type: application/json" -X POST "$DISCORD_WEBHOOK_URL" -d '{
+            "embeds": [{
+              "title": "Algorithm PR Closed: #${{ github.event.pull_request.number }}",
+              "description": "**Title:** ${{ github.event.pull_request.title }}\n**Author:** ${{ github.actor }}",
+              "color": 9807270,
+              "footer": {"text": "ClawDraw Algos"},
+              "timestamp": "'"$(date -u +%Y-%m-%dT%H:%M:%SZ)"'"
+            }]
+          }'
