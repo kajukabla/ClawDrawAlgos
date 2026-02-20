@@ -14,7 +14,7 @@ export const METADATA = {
   parameters: {
     cx:            { type: 'number', required: true, description: 'Center X' },
     cy:            { type: 'number', required: true, description: 'Center Y' },
-    radius:        { type: 'number', required: false, default: 150, description: 'Circumscribed radius' },
+    radius:        { type: 'number', required: false, default: 170, description: 'Circumscribed radius' },
     depth:         { type: 'number', required: false, default: 4, description: 'Recursion depth (1-6)' },
     color:         { type: 'string', required: false, default: '#ffffff', description: 'Hex color' },
     brushSize:     { type: 'number', required: false, default: 3, description: 'Brush width' },
@@ -27,7 +27,7 @@ export const METADATA = {
 export function kochSnowflake(cx, cy, radius, depth, color, brushSize, opacity, palette, pressureStyle) {
   cx = Number(cx) || 0;
   cy = Number(cy) || 0;
-  radius = clamp(Number(radius) || 150, 20, 500);
+  radius = clamp(Number(radius) || 170, 20, 500);
   depth = clamp(Math.round(Number(depth) || 4), 1, 6);
   brushSize = clamp(Number(brushSize) || 3, 3, 100);
   opacity = clamp(Number(opacity) || 0.8, 0.01, 1);

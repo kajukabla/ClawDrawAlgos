@@ -15,7 +15,7 @@ export const METADATA = {
   parameters: {
     cx:            { type: 'number', required: true, description: 'Center X' },
     cy:            { type: 'number', required: true, description: 'Center Y' },
-    radius:        { type: 'number', required: false, default: 120, description: 'Distance from center to vertex' },
+    radius:        { type: 'number', required: false, default: 170, description: 'Distance from center to vertex' },
     depth:         { type: 'number', required: false, default: 4, description: 'Recursion depth (1-5)' },
     color:         { type: 'string', required: false, default: '#ffffff', description: 'Hex color (ignored if palette set)' },
     brushSize:     { type: 'number', required: false, default: 3, description: 'Brush width (3-100)' },
@@ -40,7 +40,7 @@ export const METADATA = {
 export function sierpinskiTriangle(cx, cy, radius, depth, color, brushSize, opacity, palette, pressureStyle) {
   cx = Number(cx) || 0;
   cy = Number(cy) || 0;
-  radius = clamp(Number(radius) || 120, 10, 500);
+  radius = clamp(Number(radius) || 170, 10, 500);
   depth = clamp(Math.round(Number(depth) || 4), 1, 6);
   brushSize = clamp(Number(brushSize) || 3, 3, 100);
   opacity = clamp(Number(opacity) || 0.9, 0.01, 1);

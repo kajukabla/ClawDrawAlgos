@@ -15,7 +15,7 @@ export const METADATA = {
   parameters: {
     cx:            { type: 'number', required: true, description: 'Center X' },
     cy:            { type: 'number', required: true, description: 'Center Y' },
-    radius:        { type: 'number', required: false, default: 150, description: 'Outer radius' },
+    radius:        { type: 'number', required: false, default: 170, description: 'Outer radius' },
     numPoints:     { type: 'number', required: false, default: 200, description: 'Number of seed points (10-500)' },
     dotSize:       { type: 'number', required: false, default: 0.4, description: 'Dot scale relative to spacing (0.1-1.0)' },
     color:         { type: 'string', required: false, default: '#ffffff', description: 'Hex color (ignored if palette set)' },
@@ -38,7 +38,7 @@ export const METADATA = {
 export function phyllotaxisSpiral(cx, cy, radius, numPoints, dotSize, color, brushSize, opacity, palette, pressureStyle) {
   cx = Number(cx) || 0;
   cy = Number(cy) || 0;
-  radius = clamp(Number(radius) || 150, 10, 500);
+  radius = clamp(Number(radius) || 170, 10, 500);
   numPoints = clamp(Math.round(Number(numPoints) || 200), 10, 500);
   dotSize = clamp(Number(dotSize) || 0.4, 0.1, 1.0);
   brushSize = clamp(Number(brushSize) || 4, 3, 100);

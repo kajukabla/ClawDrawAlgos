@@ -14,7 +14,7 @@ export const METADATA = {
   parameters: {
     cx:            { type: 'number', required: true, description: 'Center X' },
     cy:            { type: 'number', required: true, description: 'Center Y' },
-    radius:        { type: 'number', required: false, default: 150, description: 'Fit radius' },
+    radius:        { type: 'number', required: false, default: 170, description: 'Fit radius' },
     angle1:        { type: 'number', required: false, default: 120, description: 'Initial angle 1 (degrees)' },
     angle2:        { type: 'number', required: false, default: 150, description: 'Initial angle 2 (degrees)' },
     steps:         { type: 'number', required: false, default: 1500, description: 'Simulation steps' },
@@ -30,7 +30,7 @@ export const METADATA = {
 export function doublePendulum(cx, cy, radius, angle1, angle2, steps, traces, color, brushSize, opacity, palette, pressureStyle) {
   cx = Number(cx) || 0;
   cy = Number(cy) || 0;
-  radius = clamp(Number(radius) || 150, 20, 500);
+  radius = clamp(Number(radius) || 170, 20, 500);
   angle1 = Number(angle1) || 120;
   angle2 = Number(angle2) || 150;
   steps = clamp(Math.round(Number(steps) || 1500), 100, 5000);

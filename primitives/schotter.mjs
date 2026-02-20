@@ -14,8 +14,8 @@ export const METADATA = {
   parameters: {
     cx:            { type: 'number', required: true, description: 'Center X' },
     cy:            { type: 'number', required: true, description: 'Center Y' },
-    width:         { type: 'number', required: false, default: 280, description: 'Grid width' },
-    height:        { type: 'number', required: false, default: 280, description: 'Grid height' },
+    width:         { type: 'number', required: false, default: 300, description: 'Grid width' },
+    height:        { type: 'number', required: false, default: 300, description: 'Grid height' },
     cols:          { type: 'number', required: false, default: 12, description: 'Number of columns (2-30)' },
     rows:          { type: 'number', required: false, default: 12, description: 'Number of rows (2-30)' },
     decay:         { type: 'number', required: false, default: 1.0, description: 'Disorder increase rate (0.1-3)' },
@@ -30,8 +30,8 @@ export const METADATA = {
 export function schotter(cx, cy, width, height, cols, rows, decay, color, brushSize, opacity, palette, pressureStyle) {
   cx = Number(cx) || 0;
   cy = Number(cy) || 0;
-  width = clamp(Number(width) || 280, 50, 800);
-  height = clamp(Number(height) || 280, 50, 800);
+  width = clamp(Number(width) || 300, 50, 800);
+  height = clamp(Number(height) || 300, 50, 800);
   cols = clamp(Math.round(Number(cols) || 12), 2, 30);
   rows = clamp(Math.round(Number(rows) || 12), 2, 30);
   decay = clamp(Number(decay) || 1.0, 0.1, 3);

@@ -17,7 +17,7 @@ export const METADATA = {
   parameters: {
     cx:            { type: 'number', required: true, description: 'Center X' },
     cy:            { type: 'number', required: true, description: 'Center Y' },
-    radius:        { type: 'number', required: false, default: 140, description: 'Growth radius' },
+    radius:        { type: 'number', required: false, default: 170, description: 'Growth radius' },
     particles:     { type: 'number', required: false, default: 100, description: 'Max branches (10-500)' },
     stickiness:    { type: 'number', required: false, default: 0.8, description: 'Branch wiggle (0-1)' },
     cellSize:      { type: 'number', required: false, default: 4, description: 'Unused (kept for compat)' },
@@ -32,7 +32,7 @@ export const METADATA = {
 export function dla(cx, cy, radius, particles, stickiness, cellSize, color, brushSize, opacity, palette, pressureStyle) {
   cx = Number(cx) || 0;
   cy = Number(cy) || 0;
-  radius = clamp(Number(radius) || 140, 20, 400);
+  radius = clamp(Number(radius) || 170, 20, 400);
   particles = clamp(Math.round(Number(particles) || 100), 10, 500);
   stickiness = clamp(Number(stickiness) || 0.8, 0.1, 1);
   brushSize = clamp(Number(brushSize) || 3, 3, 100);
